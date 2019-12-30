@@ -369,4 +369,5 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
     <string name="back">Back</string>
     <string name="expand_collapse">Expand / Collapse</string>
     <string name="essential">Essential</string>
+    <string name="date_note_template"># 今日概览\n\n* 今天是什么日子：晴 ; 心情: 晴\n* 起床时间：8:00 \n* 就寝时间：\n\n# 任务清单\n1.  \n# 学习\n\n# 健康\n\n# 人际\n\n# 思考·创意·未来</string>
 </resources>

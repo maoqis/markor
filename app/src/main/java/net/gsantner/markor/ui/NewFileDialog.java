@@ -96,7 +96,8 @@ public class NewFileDialog extends DialogFragment {
                 String ext = i < typeSpinnerToExtension.length ? typeSpinnerToExtension[i] : "";
                 switch (i) {
                     case 4: {
-                        prefix = new SimpleDateFormat("yyyy-MM-dd-").format(new Date());
+                        prefix = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+
                         break;
                     }
                 }
@@ -108,6 +109,7 @@ public class NewFileDialog extends DialogFragment {
                     fileNameEdit.setText(prefix + fileNameEdit.getText().toString());
                 }
                 fileNameEdit.setSelection(fileNameEdit.length());
+
             }
 
             @Override
@@ -118,12 +120,27 @@ public class NewFileDialog extends DialogFragment {
         dialogBuilder.setView(root);
         fileNameEdit.requestFocus();
         if (BuildConfig.IS_TEST_BUILD) {
-            fileNameEdit.setText("a");
+            fileNameEdit.setText("");
             templateSpinner.postDelayed(() -> {
                 templateSpinner.requestFocus();
                 templateSpinner.performClick();
             }, 100);
         }
+
+        templateSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 3) {
+                    typeSpinner.setSelection(4);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
         final ShareUtil shareUtil = new ShareUtil(getContext());
         dialogBuilder
@@ -132,6 +149,8 @@ public class NewFileDialog extends DialogFragment {
                     if (ez(fileNameEdit)) {
                         return;
                     }
+
+
 
                     File f = new File(basedir, fileNameEdit.getText().toString() + fileExtEdit.getText().toString());
                     String templateContents = getTemplateContent(templateSpinner, basedir);
@@ -201,7 +220,7 @@ public class NewFileDialog extends DialogFragment {
                 break;
             }
             case 3: {
-                t = "---\nlayout: post\ntags: []\ncategories: []\n#date: 2019-06-25 13:14:15\n#excerpt: ''\n#image: 'BASEURL/assets/blog/img/.png'\n#description:\n#permalink:\ntitle: 'title'\n---\n\n\n";
+                t = getContext().getResources().getString(R.string.date_note_template);
                 break;
             }
             case 4: {
@@ -223,6 +242,7 @@ public class NewFileDialog extends DialogFragment {
                 }
                 break;
             }
+
             default:
             case 0: {
                 return null; // Empty file template (that doesn't overwrite anything

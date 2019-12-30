@@ -229,7 +229,7 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
     <string name="tmaid_todotxt_sort_todo" translatable="false">tmaid_todotxt_sort_todo</string>
 
 
-    <string name="jekyll_post" translatable="false">Jekyll Post</string>
+    <string name="jekyll_post" translatable="false">md日记类型</string>
     <string name="zim_wiki" translatable="false">Zim Wiki</string>
     <string name="pref_key__is_multi_window_enabled" translatable="false">pref_key__is_multi_window_enabled</string>
     <string name="pref_key__is_enable_experimental_features" translatable="false">pref_key__is_enable_experimental_features</string>
@@ -246,7 +246,7 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
     <string name="pref_key__view_mode_link_color" translatable="false">pref_key__view_mode_link_color</string>
     <string name="features" translatable="false">Features</string>
     <string name="file_template__md_markor_markdown_reference" translatable="false">markor-markdown-reference.md</string>
-    <string name="file_template__md_jekyll_post" translatable="false">2029-01-01-jekyll-post.md</string>
+    <string name="file_template__md_jekyll_post" translatable="false">2029-01-01.md</string>
     <string name="file_template__md_cooking_recipe" translatable="false">cooking-recipe.md</string>
     <string name="file_template__txt_todo_sample" translatable="false">todo.example.txt</string>
     <string name="file_template__txt_zim_wiki" translatable="false">zim-wiki.txt</string>
