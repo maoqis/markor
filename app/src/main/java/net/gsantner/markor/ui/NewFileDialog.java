@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -144,6 +145,21 @@ public class NewFileDialog extends DialogFragment {
         dialogBuilder.setView(root);
         fileNameEdit.requestFocus();
 
+        templateSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 3) {
+                    typeSpinner.setSelection(4);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
         final ShareUtil shareUtil = new ShareUtil(getContext());
         dialogBuilder
                 .setNegativeButton(R.string.cancel, (dialogInterface, i) -> dialogInterface.dismiss())
@@ -213,7 +229,7 @@ public class NewFileDialog extends DialogFragment {
                 break;
             }
             case 3: {
-                t = "---\nlayout: post\ntags: []\ncategories: []\n#date: 2019-06-25 13:14:15\n#excerpt: ''\n#image: 'BASEURL/assets/blog/img/.png'\n#description:\n#permalink:\ntitle: 'title'\n---\n\n\n";
+                t = getContext().getResources().getString(R.string.date_note_template);
                 break;
             }
             case 4: {

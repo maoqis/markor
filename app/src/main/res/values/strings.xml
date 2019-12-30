@@ -390,4 +390,5 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
     <string name="password_already_set_setting_a_new_password_will_overwrite">Password already set. Setting a new password will overwrite the existing password and you may not be able to access files anymore in case you forget the password.</string>
     <string name="code_block">Code block</string>
 
+    <string name="date_note_template"># 今日概览\n\n* 今天是什么日子：晴 ; 心情: 晴\n* 起床时间：8:00 \n* 就寝时间：\n\n# 任务清单\n1.  \n# 学习\n\n# 健康\n\n# 人际\n\n# 思考·创意·未来</string>
 </resources>
