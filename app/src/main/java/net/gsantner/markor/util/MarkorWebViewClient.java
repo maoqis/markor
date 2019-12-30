@@ -12,8 +12,11 @@ package net.gsantner.markor.util;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -22,10 +25,12 @@ import net.gsantner.markor.activity.DocumentActivity;
 import net.gsantner.markor.format.TextFormat;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.net.URLDecoder;
 
 public class MarkorWebViewClient extends WebViewClient {
-
+    private static final String TAG = "MarkorWebViewClient";
     private final Activity _activity;
     private int _restoreScrollY = 0;
     private boolean _restoreScrollYEnabled = false;
@@ -33,6 +38,32 @@ public class MarkorWebViewClient extends WebViewClient {
     public MarkorWebViewClient(Activity activity) {
         _activity = activity;
     }
+
+
+    @Nullable
+    @Override
+    public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
+
+        Log.d(TAG, "shouldInterceptRequest: " + url);
+
+
+        if (url.startsWith("file:///assets/")) {
+            url = url.replace("file://", "" + AppSettings.get().getNotebookDirectoryAsStr());
+            Log.d(TAG, "shouldInterceptRequest: " + url);
+
+            try {
+                InputStream localCopy = new FileInputStream(new File(url));
+
+                return new WebResourceResponse("image/png", "UTF-8", localCopy);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        return super.shouldInterceptRequest(view, url);
+    }
+
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
