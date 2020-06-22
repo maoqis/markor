@@ -24,15 +24,18 @@ buildscript {
         // https://developer.android.com/topic/libraries/support-library/
         version_library_appcompat = "28.0.0" //androidx
         // https://github.com/JakeWharton/butterknife/releases
-        version_library_butterknife = "8.8.1" //9.0.0-rc2
+        version_library_butterknife = "10.0.0" //9.0.0-rc2
         // https://github.com/guardianproject/NetCipher/releases
         version_library_netcipher = "2.0.0-alpha1"
     }
 
     repositories {
+
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url "https://jitpack.io" }
         maven { url 'https://maven.google.com' }
         jcenter()
-        maven { url "https://jitpack.io" }
+
         mavenCentral()
     }
 
@@ -50,9 +53,12 @@ buildscript {
 
 allprojects {
     repositories {
+
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url "https://jitpack.io" }
         maven { url 'https://maven.google.com' }
         jcenter()
-        maven { url "https://jitpack.io" }
+
         mavenCentral()
     }
 

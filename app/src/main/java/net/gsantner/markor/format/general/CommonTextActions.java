@@ -12,10 +12,11 @@ package net.gsantner.markor.format.general;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.annotation.StringRes;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+
+import androidx.annotation.StringRes;
 
 import com.flask.colorpicker.ColorPickerView;
 import com.flask.colorpicker.Utils;

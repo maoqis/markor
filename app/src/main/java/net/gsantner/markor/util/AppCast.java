@@ -12,7 +12,8 @@ package net.gsantner.markor.util;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v4.content.LocalBroadcastManager;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 /**
  * Broadcasts Helper for broadcasts sent & received in app

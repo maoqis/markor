@@ -14,9 +14,11 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Environment;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IdRes;
-import android.support.v4.util.Pair;
+
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.IdRes;
+import androidx.core.util.Pair;
 
 import net.gsantner.markor.App;
 import net.gsantner.markor.BuildConfig;

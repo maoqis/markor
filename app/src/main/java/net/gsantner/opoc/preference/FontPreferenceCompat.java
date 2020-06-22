@@ -25,9 +25,7 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Environment;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.preference.ListPreference;
+
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextPaint;
@@ -35,6 +33,10 @@ import android.text.TextUtils;
 import android.text.style.MetricAffectingSpan;
 import android.text.style.RelativeSizeSpan;
 import android.util.AttributeSet;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.preference.ListPreference;
 
 import java.io.File;
 import java.io.FilenameFilter;

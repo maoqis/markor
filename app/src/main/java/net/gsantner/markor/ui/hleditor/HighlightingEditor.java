@@ -11,12 +11,13 @@ package net.gsantner.markor.ui.hleditor;
 
 import android.content.Context;
 import android.os.Handler;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 import net.gsantner.markor.activity.MainActivity;
 import net.gsantner.markor.model.Document;

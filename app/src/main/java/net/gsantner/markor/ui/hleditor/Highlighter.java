@@ -13,8 +13,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.ParcelableSpan;
@@ -33,6 +31,9 @@ import android.text.style.StyleSpan;
 import android.text.style.TextAppearanceSpan;
 import android.text.style.TypefaceSpan;
 import android.util.Patterns;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 
 import net.gsantner.markor.BuildConfig;
 import net.gsantner.markor.activity.MainActivity;

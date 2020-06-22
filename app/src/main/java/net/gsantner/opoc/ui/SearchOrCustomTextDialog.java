@@ -16,13 +16,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.AppCompatEditText;
+
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -38,6 +32,16 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatEditText;
+
+import com.google.android.material.snackbar.Snackbar;
+
+import net.gsantner.markor.R;
 import net.gsantner.opoc.util.ActivityUtils;
 import net.gsantner.opoc.util.Callback;
 import net.gsantner.opoc.util.ContextUtils;
@@ -89,8 +93,8 @@ public class SearchOrCustomTextDialog {
         final List<CharSequence> allItems = new ArrayList<>(dopt.data);
         final List<CharSequence> filteredItems = new ArrayList<>(allItems);
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity, dopt.isDarkDialog
-                ? android.support.v7.appcompat.R.style.Theme_AppCompat_Dialog
-                : android.support.v7.appcompat.R.style.Theme_AppCompat_Light_Dialog
+                ? R.style.Theme_AppCompat_Dialog
+                : R.style.Theme_AppCompat_Light_Dialog
         );
 
         final ArrayAdapter<CharSequence> listAdapter = new ArrayAdapter<CharSequence>(activity, android.R.layout.simple_list_item_1, filteredItems) {

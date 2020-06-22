@@ -10,9 +10,10 @@
 package net.gsantner.markor.format.plaintext;
 
 import android.app.Activity;
-import android.support.annotation.StringRes;
 import android.view.HapticFeedbackConstants;
 import android.view.View;
+
+import androidx.annotation.StringRes;
 
 import net.gsantner.markor.R;
 import net.gsantner.markor.format.general.CommonTextActions;

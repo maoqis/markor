@@ -15,10 +15,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.print.PrintJob;
-import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 import android.webkit.WebView;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import net.gsantner.markor.BuildConfig;
 import net.gsantner.markor.R;

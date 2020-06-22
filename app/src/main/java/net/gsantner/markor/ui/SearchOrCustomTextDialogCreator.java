@@ -12,7 +12,6 @@ package net.gsantner.markor.ui;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Environment;
-import android.support.v4.content.ContextCompat;
 import android.text.InputType;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -22,6 +21,8 @@ import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.view.Gravity;
 import android.view.WindowManager;
+
+import androidx.core.content.ContextCompat;
 
 import net.gsantner.markor.R;
 import net.gsantner.markor.util.AppSettings;
